@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senthil Kumar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #2563eb;
+            --background-color: #f3f4f6;
+            --text-color: #1f2937;
+            --accent-color: #f59e0b;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background-color: var(--primary-color);
+            color: white;
+            width: 25%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 40px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+        }
+
+        .project, .certifications, .education {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-btn {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .dark-theme {
+            --background-color: #1f2937;
+            --text-color: #f3f4f6;
+            --primary-color: #111827;
+            --secondary-color: #374151;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="Senthil.jpg" alt="Senthil Kumar" class="profile-pic">
+            <h2>Senthil Kumar C</h2>
+            <p>Motivated Computer Science Bachelor’s graduate passionate about software development.</p>
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:senthilkumarchandru675@gmail.com">senthilkumarchandru675@gmail.com</a></p>
+            <p>Phone: +91 8870806481</p>
+            <p>Location: New Perungalathur, Chengalpattu, 600063</p>
+        </aside>
+        <main class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Passionate about coding, problem-solving, and team collaboration. Looking for opportunities to apply my knowledge effectively.</p>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>SQL</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="carousel">
+                    <button class="carousel-btn" id="prevBtn">&#10094;</button>
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <h3>Bus Ticket Reservation Using JDBC</h3>
+                            <p>Developed a system with real-time seat availability, customer management, and database connectivity.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Portfolio</h3>
+                            <p>Created a responsive portfolio website using HTML, CSS and JavaScript with interactive elements like project carousel, animated skill bars, and smooth scrolling. It includes a theme toggle feature and a modern design optimized for both desktop and mobile devices.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn" id="nextBtn">&#10095;</button>
+                </div>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <p><strong>B.E. Computer Science and Engineering</strong> - Sri Sairam Institute of Technology (2020 - 2024, CGPA: 7.85/10)</p>
+                <p><strong>HSC</strong> - Zion Matric. Hr. Sec. School (2018 - 2019, Grade: 75.83%)</p>
+                <p><strong>SSLC</strong> - Zion Matric. Hr. Sec. School (2016 - 2017, Grade: 92.6%)</p>
+            </section>
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Generative AI - Kodacy</li>
+                    <li>Java Full-Stack Development (Currently Pursuing)</li>
+                    <li>Cloud Computing - NPTEL</li>
+                </ul>
+            </section>
+            <section id="interests">
+                <h2>Interests</h2>
+                <ul>
+                    <li>Web Designing</li>
+                    <li>Game Designing</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
