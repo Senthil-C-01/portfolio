@@ -1,1 +1,1 @@
-# portfolio
+I developed a dynamic and responsive portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects, and certifications. The site includes interactive elements like a project carousel, animated skill progress bars, and smooth scroll animations for an engaging user experience. It also features a theme toggle function, ensuring a modern and customizable design suitable for both desktop and mobile browsers.
